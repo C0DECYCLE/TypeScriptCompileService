@@ -1,4 +1,4 @@
-# TypeScript Compile Service
+# TypeScriptCompileService
 
 ## 📜 About
 > This allows you to link TypeScript files directly in HTML. They are automatically compiled in the background with web workers. Use it for fast, seamless development. It should not be shipped.
