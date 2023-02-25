@@ -38,7 +38,7 @@ Just link any TypeScript file using the script tag, with type="text/typescript".
 After each TypeScript file linked in the HTML is compiled, the "compile" event gets fired.
 ```ts
 window.addEventListener("compile", (event: Event): void => {
-  //...
+    //...
 });
 ```
 > Depending on the use case, it may be necessary to execute code once this event has been triggered and all TypeScript files have been compiled.
@@ -47,9 +47,10 @@ window.addEventListener("compile", (event: Event): void => {
 It is possible to give manual compilation instructions to the service.
 ```ts
 typescriptCompileService(
-  { key: "compile", src: "/example/main.ts", innerHTML: null }, 
-(jsSource: string, linesCount: number) => {
-  //...
-});
+    { key: "compile", src: "/example/main.ts", innerHTML: null },
+    (jsSource: string, linesCount: number) => {
+        //...
+    }
+);
 ```
 > You can either pass a URL to a TypeScript file (src) or pass the TypeScript source code directly (innerHTML).
