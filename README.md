@@ -5,7 +5,7 @@
 ## Usage
 
 ### Configure
-Adjust the paths and settings in the typescript-service-config.js file.
+Adjust the paths and settings in the <b>typescript-service-config.js</b> file.
 ```js
 const typescriptCompileServiceConfig = {
     /*tsconfig absolute path*/
@@ -29,13 +29,13 @@ In your HTML file, link the config script and the main script.
 ```
 
 ### Typescript files
-Just link any TypeScript file using the script tag, with type="text/typescript".
+Just link any TypeScript file using the script tag, with <b>type="text/typescript"</b>.
 ```html
 <script type="text/typescript" src="/example/main.ts"></script>
 ```
 
 ### Compile event
-After each TypeScript file linked in the HTML is compiled, the "compile" event gets fired.
+After each TypeScript file linked in the HTML is compiled, the <b>"compile"</b> event gets fired.
 ```ts
 window.addEventListener("compile", (event: Event): void => {
     //...
@@ -53,4 +53,4 @@ typescriptCompileService(
     }
 );
 ```
-> You can either pass a URL to a TypeScript file (src) or pass the TypeScript source code directly (innerHTML).
+> You can either pass a URL to a TypeScript file (<b>src</b>) or pass the TypeScript source code directly (<b>innerHTML</b>).
