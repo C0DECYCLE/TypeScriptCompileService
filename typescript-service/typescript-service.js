@@ -74,6 +74,13 @@
             };
         };
 
+        workers.terminateAllButOne = () => {
+            for (let i = 1; i < workers.free.length; i++) {
+                workers.free[i].terminate();
+            }
+            workers.free.length = 1;
+        };
+
         return workers;
     }
 
@@ -166,7 +173,9 @@
                 )}/file)`
             );
         }
+
         window.dispatchEvent(compileEvent);
+        workers.terminateAllButOne();
     }
 
     window.addEventListener(
